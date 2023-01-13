@@ -1,0 +1,305 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family:'Audiowide', sans-serif;
+    background-color: rgb(245, 244, 244);
+}
+
+input,
+button,
+a,
+textarea {
+    border: none;
+    text-decoration: none;
+    background: none;
+}
+
+.modal {
+    overflow: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+
+    overflow: scroll;
+    background: white;
+    border: 1px solid rgb(27, 54, 79);
+    border-radius: 10px;
+    box-shadow: 3px 3px 2px rgb(51, 68, 82);
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+input,
+.modal select {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(9, 40, 59);
+    height: 22px;
+    padding: 3px;
+    border: 1px solid rgb(109, 124, 135);
+    border-radius: 3px;
+    margin: 10px 0px 10px 0px;
+}
+
+.modal select {
+    height: 30px;
+    padding: 5px;
+    width: 101%;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+    border-radius: 0px;
+    border-bottom: 2px solid rgb(5, 45, 74);
+}
+
+textarea {
+    width: 100%;
+    min-height: 70px;
+    padding: 3px;
+    border: 1px solid rgb(109, 124, 135);
+    border-radius: 3px;
+    margin: 10px 0px 10px 0px;
+}
+
+textarea:focus {
+    border: none;
+    outline: none;
+    border-radius: 0px;
+    border-bottom: 2px solid rgb(5, 45, 74);
+}
+
+input[type=submit],
+input[type=button],
+#searchForm select,
+button {
+    width: fit-content;
+    height: auto;
+    margin: 0px 10px 0px 10px;
+    padding: 5px 10px 5px 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(9, 40, 59);
+    border: 3px solid rgb(9, 40, 59);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+input[type=submit]:hover,
+input[type=button]:hover,
+#searchForm select:hover,
+button:hover {
+    cursor: pointer;
+    background-color: rgb(9, 40, 59);
+    color: rgb(255, 255, 255);
+    border: 3px solid rgb(9, 40, 59);
+}
+
+label {
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: larger;
+    width: 100%;
+}
+
+
+nav {
+    overflow: scroll;
+    padding:30px ;
+    width:auto;
+    height: 100vh;
+    top: 0px;
+    background-color: white;
+    left: 0px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    box-shadow: 2px 2px 3px rgba(11, 31, 57, 0.579);
+}
+
+
+nav *{
+    margin: 0px !important;
+    width:100% !important;
+}
+nav > *{
+
+    display: flex;
+    flex-direction: column;
+    margin: 10px !important;
+}
+#searchForm *{
+    margin: 10px !important;
+}
+a {
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.main {
+    position: relative;
+    margin-top: 70px;
+    margin-left: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    cursor: pointer;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action a {
+    margin: 10px;
+}
+
+
+
+nav a {
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(0, 74, 126);
+}
+
+.product {
+    border: 2px solid rgb(5, 64, 82);
+    margin: 15px 25px;
+    height: 250px;
+    width: 250px;
+}
+
+.photo {
+
+    background-color: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    padding: 0px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.photo:hover {
+    background-color: rgba(0, 0, 0, 0.605);
+}
+
+.photo label {
+    cursor: pointer;
+    font-weight: 500;
+    position: absolute;
+    font-size: large;
+    color: #ffffff;
+    text-align: center;
+}
+
+.photo:hover label {
+
+    font-size: larger;
+    color: #ffffff;
+}
+
+.photo img {
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+.bg{
+    position: absolute;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width:100%;
+}
+
+.card {
+    padding: 20px;
+    background-color: #ffffff;
+    border-bottom: 2px solid rgb(5, 45, 74);
+    border-radius: 5px;
+    width: 300px;
+    margin: 15px 30px 15px 0px;
+    box-shadow: 2px 2px 3px rgb(5, 45, 74);
+}
+#components{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.broken{
+    color: red;
+}
+.available{
+    color: green;
+}
+.lost{
+    color: grey;
+}
+
+.page-template {
+    width: 587px;
+    height: 1015px;
+    padding: 0px 100px 100px 100px;
+    margin: 0px;
+    border: 3px double #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    background-color: white;
+}
+.page-template div,h2{
+    margin:50px 0px;
+}
+.page-template div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
