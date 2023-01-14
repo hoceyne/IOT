@@ -1,9 +1,9 @@
 <?php
 
-$host = 'containers-us-west-126.railway.app:7695';
-$bdd_name = 'railway';
-$login = 'root';
-$mdp = '2rvhj1QXzVPd2mkYHqj7';
+$host = 'localhost';
+$bdd_name = 'IOT';
+$login = 'admin';
+$mdp = 'Admin+2001';
 
 try {
     $bdd = new PDO('mysql:host=' . $host . ';dbname=' . $bdd_name . ';charset=utf8', $login, $mdp);

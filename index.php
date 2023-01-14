@@ -21,6 +21,8 @@
 			<button id="close">X</button>
 			<form action="" method="post" id="newForm" target="" enctype="multipart/form-data">
 				<input name="id" hidden>
+				<input name="image" hidden>
+				<input name="extension" hidden>
 				<div class="photo">
 					<label>
 						<span>Change Image</span>
@@ -162,7 +164,7 @@
 									<a onclick="edition(this)" data-arg="${i+1}">
 										<img src="assets/img/icons/pencil-fill.svg">
 									</a>
-									<a href="/delete.php?id=${value['id']}">
+									<a href="delete.php?id=${value['id']}">
 										<img src="assets/img/icons/trash.svg">
 									</a>
 								</div>
@@ -220,6 +222,7 @@
 		// When the user clicks on the button, open the modal
 		const edition = (element) => {
 			component = global_data[element.getAttribute("data-arg") - 1];
+			console.log(component);
 			var keys = ['id', 'name', 'image', 'purshased_at', 'quantity', 'extension'];
 			for (key of keys) {
 				$('input[name="' + key + '"]').val(component[key]);
@@ -316,7 +319,7 @@
 									<a onclick="edition(this)" data-arg="${i+1}">
 										<img src="assets/img/icons/pencil-fill.svg">
 									</a>
-									<a href="/delete.php?id=${value['id']}">
+									<a href="delete.php?id=${value['id']}">
 										<img src="assets/img/icons/trash.svg">
 									</a>
 								</div>
